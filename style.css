@@ -3,7 +3,7 @@ pre.note {
     /* 要素の位置を相対指定する */
     display: block;
     /* 要素をインラインブロックとして表示する */
-    padding: 30px 2em 2em;
+    padding: 3em 2em 2em;
     /* 要素内側の余白を指定する */
     background-color: #f8f8f8;
     /* 背景色を指定する */
