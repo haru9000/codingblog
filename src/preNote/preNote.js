@@ -18,10 +18,3 @@ function preNodePopup() {
         });
     }
 }
-
-
-
-// ロード時の処理
-window.addEventListener('load', function() {
-    preNodePopup();
-});
