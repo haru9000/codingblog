@@ -1,4 +1,4 @@
-import preNote from src.preNote;
+import preNote from ./src/preNote;
 
 
 
