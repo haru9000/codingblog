@@ -6,7 +6,8 @@
   background-size: 15px 15px;
 }
 
-.summary .sticky-note {
+.summary:before {
+  content: "まとめ";
   position: absolute;
   top: 10px;
   left: 10px;
