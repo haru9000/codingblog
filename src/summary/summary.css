@@ -6,12 +6,30 @@
 }
 
 .summary:before {
-  content: "まとめ";
+  content: "point";
   position: absolute;
   top: 0px;
   left: 0px;
   padding: 5px;
   background: repeating-linear-gradient(45deg, #E7F3FD, #E7F3FD 5px, white 5px, white 10px);
   border: 1px solid #B0E2FF;
+  font-weight: bold;
+}
+
+.summary-memo {
+  display: block;
+  position: relative;
+  padding: 3em 1em 2em;
+  border: 3px double #87face;
+}
+
+.summary-memo:before {
+  content: "point";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 5px;
+  background: repeating-linear-gradient(45deg, #E7FdF3, #E7FdF3 5px, white 5px, white 10px);
+  border: 1px solid #B0ffe2;
   font-weight: bold;
 }
