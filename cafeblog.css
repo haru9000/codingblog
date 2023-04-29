@@ -917,49 +917,6 @@ top: 0;
     }
 }
 
-/* ストア用 */
-article#entry-13574176438061237602 header {
-    display: none;
-}
-
-
-article#entry-13574176438061237602 h2{
-    padding: 0.618em 0;
-    border-radius: 10px;
-    margin-top: 0;
-    background: #fff;
-    border-left: none;
-}
-
-article#entry-13574176438061237602 {
-    background: #f8f8f8;
-}
-
-.store-menu {
-    position: relative;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 3px 4px 5px 0px #ccc;
-    padding: 0.618em;
-    margin-bottom: 1.236em;
-}
-
-.store-menu a.http-image {
-    float:left;
-    max-width:50%;
-}
-
-.store-menu .store-menu-caption {
-    line-height:1.618em;
-}
-
-.store-menu-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 .hatena-asin-detail.fixed {
     bottom: 0;
     left: 0;
@@ -1449,7 +1406,7 @@ text-align: center;
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 80%;
+    width: 90%;
     margin:0 auto;
     padding: .9em 2em;
     border: 1px solid #e78888;
