@@ -1,5 +1,5 @@
 export default class preNote {
-    function preNodePopup() {
+    preNodePopup() {
         // 「Copy code」ボタンをクリックしたときに、preタグの中身をクリップボードにコピーする
         var preElements = document.querySelectorAll('pre.note');
         for (var i = 0; i < preElements.length; i++) {
