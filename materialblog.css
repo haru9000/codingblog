@@ -1,2 +1,17 @@
 @import 'cafeblog.css';
 @import './src/preNote/preNote.css';
+
+.summary {
+  background-image: linear-gradient(to bottom right, #87CEFA 50%, #FFFFFF 50%);
+  background-size: 15px 15px;
+}
+
+.summary .sticky-note {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px;
+  background-color: yellow;
+  font-weight: bold;
+}
+
