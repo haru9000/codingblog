@@ -2,17 +2,18 @@
 @import './src/preNote/preNote.css';
 
 .summary {
-  background-image: linear-gradient(to bottom right, #FFFFFF 49%, #87CEFA 2%, #FFFFFF 49%);
+  background-image: linear-gradient(to bottom right, #FFFFFF 45%, #87CEFA 10%, #FFFFFF 45%);
   background-size: 15px 15px;
   display: block;
   position: relative;
+  padding: 3em 1em;
 }
 
 .summary:before {
   content: "まとめ";
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 0px;
+  left: 0px;
   padding: 5px;
   background-color: yellow;
   font-weight: bold;
