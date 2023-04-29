@@ -2,7 +2,7 @@
 @import './src/preNote/preNote.css';
 
 .summary {
-  background-image: linear-gradient(45deg, #FFFFFF 40%, #87CEFA 50%, #FFFFFF 75%, #FFFFFF);
+  background-image: linear-gradient(45deg, #FFFFFF 45%, #87CEFA 50%, #FFFFFF 55%, #FFFFFF);
   background-size: 10px 10px;
   display: block;
   position: relative;
