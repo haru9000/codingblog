@@ -4,6 +4,8 @@
 .summary {
   background-image: linear-gradient(to bottom right, #87CEFA 50%, #FFFFFF 50%);
   background-size: 15px 15px;
+  display: block;
+  position: relative;
 }
 
 .summary:before {
