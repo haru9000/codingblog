@@ -6,7 +6,7 @@
 }
 
 .summary:before {
-  content: "point";
+  content: "まとめ";
   position: absolute;
   top: 0px;
   left: 0px;
@@ -24,7 +24,7 @@
 }
 
 .summary-memo:before {
-  content: "point";
+  content: "メモ";
   position: absolute;
   top: 0px;
   left: 0px;
