@@ -24,7 +24,7 @@
 }
 
 .summary-memo:before {
-  content: "メモ";
+  content: "ポイント";
   position: absolute;
   top: 0px;
   left: 0px;
