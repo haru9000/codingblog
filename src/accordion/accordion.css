@@ -1,0 +1,108 @@
+/* ---- アコーディオン ---- */
+.accordion {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion input[type="checkbox"] {
+    display: none;
+}
+
+.accordion label {
+    cursor: pointer;
+    background-color: #eee;
+    padding: 10px;
+    margin: 0;
+    display: block;
+    font-weight: bold;
+    color: #444;
+    border-bottom: 1px solid #ccc;
+}
+
+.accordion .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #f9f9f9;
+    padding: 0 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.accordion input[type="checkbox"]:checked ~ .content {
+    max-height: 200px;
+    padding: 10px 10px;
+}
+
+.accordion label span {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.accordion input[type="checkbox"]:checked ~ label span {
+    transform: rotate(180deg);
+    display: inline-block;
+}
+
+
+/* ---- もっと見る ---- */
+.accordion-see-more {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion-see-more input[type="checkbox"] {
+    display: none;
+}
+
+.accordion-see-more label {
+    cursor: pointer;
+    background-color: #eee;
+    padding: 10px;
+    margin: 0;
+    display: block;
+    font-weight: bold;
+    color: #444;
+    border-bottom: 1px solid #ccc;
+}
+
+.accordion-see-more .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #f9f9f9;
+    padding: 0 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.accordion-see-more input[type="checkbox"]:checked ~ .content {
+    max-height: 200px;
+    padding: 10px 10px;
+}
+
+.accordion-see-more label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    margin:0 auto;
+    padding: .9em 2em;
+    border: 1px solid #e78888;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #e78888;
+    font-size: 1em;
+}
+
+.accordion-see-more label:hover {
+    animation: anima-button-030 1s;
+}
+
+@keyframes anima-button-030 {
+    0% {
+        box-shadow: 0 0 0 0 rgb(231 136 136 / 50%);
+    }
+    100% {
+        box-shadow: 0 0 0 1.2em rgb(0 0 0 / 0%);
+    }
+}
