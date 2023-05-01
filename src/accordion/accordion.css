@@ -2,6 +2,7 @@
 .accordion {
     display: flex;
     flex-direction: column;
+    margin: 1em 0 1.5em;
 }
 
 .accordion input[type="checkbox"] {
@@ -48,6 +49,7 @@
 .accordion-see-more {
     display: flex;
     flex-direction: column;
+    margin: 1em 0 1.5em;
 }
 
 .accordion-see-more input[type="checkbox"] {
