@@ -54,17 +54,6 @@
     display: none;
 }
 
-.accordion-see-more label {
-    cursor: pointer;
-    background-color: #eee;
-    padding: 10px;
-    margin: 0;
-    display: block;
-    font-weight: bold;
-    color: #444;
-    border-bottom: 1px solid #ccc;
-}
-
 .accordion-see-more .content {
     max-height: 0;
     overflow: hidden;
@@ -85,7 +74,7 @@
     align-items: center;
     position: relative;
     width: 90%;
-    margin:0 auto;
+    margin: 1em auto;
     padding: .9em 2em;
     border: 1px solid #e78888;
     border-radius: 5px;
