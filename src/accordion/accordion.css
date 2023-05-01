@@ -69,7 +69,7 @@
 }
 
 .accordion-see-more input[type="checkbox"]:checked ~ label {
-    display: block;
+    display: none;
 }
 
 .accordion-see-more label {
