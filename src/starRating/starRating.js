@@ -16,7 +16,7 @@ export default class starRating {
     });
 
     if (hasHalfStar) {
-      halfStar.classList.add('active');
+      halfStar.classList.add('fa-star-half');
     }
   }
 
