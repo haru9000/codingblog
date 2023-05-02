@@ -3,6 +3,7 @@ export default class starRating {
   }
 
   setRating(rating) {
+    const stars = starRating.querySelectorAll('.fa-star');
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 !== 0;
     const halfStar = stars[fullStars];
