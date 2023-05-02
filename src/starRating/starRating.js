@@ -2,8 +2,9 @@ export default class starRating {
   constructor() {
   }
 
-  setRating(rating) {
+  setRating(starRating) {
     const stars = starRating.querySelectorAll('.fa-star');
+    const rating = starRating.getAttribute('data-rating');
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 !== 0;
     const halfStar = stars[fullStars];
