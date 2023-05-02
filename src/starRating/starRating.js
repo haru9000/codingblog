@@ -2,7 +2,7 @@ export default class starRating {
   constructor() {
   }
 
-  setRating(starRating) {
+  setRating(rating) {
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 !== 0;
     const halfStar = stars[fullStars];
