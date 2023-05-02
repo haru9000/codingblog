@@ -6,7 +6,7 @@ export default class starRating {
     const stars = starRating.querySelectorAll('.fa-star');
     const rating = starRating.getAttribute('data-rating');
     const fullStars = Math.floor(rating);
-    const hasHalfStar = rating % 1 !== 0;
+    const hasHalfStar = rating % 1 >= 0.5;
     const halfStar = stars[fullStars];
 
     stars.forEach((star, index) => {
