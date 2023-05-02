@@ -1,0 +1,19 @@
+.star-rating {
+  font-size: 30px;
+  display: inline-block;
+  position: relative;
+}
+
+.fa-star {
+  color: #ccc;
+  font-size: inherit;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: color 0.2s ease-out;
+}
+
+.fa-star.active {
+  color: orange;
+  transition: color 0.2s ease-in;
+}
