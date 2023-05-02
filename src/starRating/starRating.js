@@ -7,7 +7,7 @@ export default class starRating {
     const rating = starRating.getAttribute('data-rating');
 
     stars.forEach((star, index) => {
-      if (index < rating) {
+      if (index < Math.ceil(num)) {
         star.classList.add('active');
       } else {
         star.classList.remove('active');
