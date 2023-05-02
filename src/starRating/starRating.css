@@ -10,7 +10,7 @@
   color: orange;
 }
 
-.star-rating .fa-star-half {
+.fa-star.star-half {
   background: linear-gradient(to right, orange 50%, #ccc 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
