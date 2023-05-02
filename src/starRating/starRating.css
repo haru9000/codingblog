@@ -10,6 +10,11 @@
   color: orange;
 }
 
+.star-rating .fa-star-half {
+  background: linear-gradient(to right, orange 50%, #ccc 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .fa-star:nth-child(1) {
   animation: fadeIn 1s ease-in-out;
