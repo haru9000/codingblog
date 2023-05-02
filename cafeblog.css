@@ -155,7 +155,9 @@ font-family: "メイリオ","Meiryo","Hiragino Sans","ヒラギノ角ゴシッ�
 
 /* h1 ~ h4 */
 
-.entry-content h1, .entry-content h2 {
+.entry-content h1,
+.entry-content h2,
+.entry-content .h2 {
     position: relative;
     padding: .3em 0 .2em 1em;
     border-bottom: 3px solid #ff9b94;
@@ -169,7 +171,8 @@ font-family: "メイリオ","Meiryo","Hiragino Sans","ヒラギノ角ゴシッ�
 }
 
 .entry-content h1::before, 
-.entry-content h2::before {
+.entry-content h2::before, 
+.entry-content .h2::before {
     position: absolute;
     top: 0;
     left: .3em;
@@ -181,7 +184,8 @@ font-family: "メイリオ","Meiryo","Hiragino Sans","ヒラギノ角ゴシッ�
 }
 
 .entry-content h1::after, 
-.entry-content h2::after {
+.entry-content h2::after, 
+.entry-content .h2::after {
     position: absolute;
     transform: rotate(15deg);
     top: .6em;
@@ -193,7 +197,8 @@ font-family: "メイリオ","Meiryo","Hiragino Sans","ヒラギノ角ゴシッ�
 }
 
 
-.entry-content h3 {
+.entry-content h3,
+.entry-content .h3 {
     margin-top: 0.5em;
     font-size: 105%;
     border-left: 2px solid #dea08c;
@@ -201,14 +206,16 @@ font-family: "メイリオ","Meiryo","Hiragino Sans","ヒラギノ角ゴシッ�
     border-bottom: 1px dashed #dea08c;
 }
 
-.entry-content h4 {
+.entry-content h4,
+.entry-content .h4 {
     font-size: 100%;
     border-left: none;
     padding: 0 0;
     color: #DE9F8C;
 }
 
-.entry-content h5 {
+.entry-content h5,
+.entry-content .h5 {
     font-size: 1em;
     margin-top: 0.8em;
     color: #DE9F8C;
