@@ -1,3 +1,4 @@
 @import 'cafeblog.css';
 @import './src/summary/summary.css';
 @import './src/accordion/accordion.css';
+@import './src/starRating/starRating.css';
