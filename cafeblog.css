@@ -755,7 +755,7 @@ a.banner-area-link {
 .archive-entries .archive-entry {
     font-size:12px;
     margin: 1px 1%;
-    padding: 10px 10px 0px;
+    padding: 10px;
     position: relative; 
     width: 100%;
 	display:flex;
