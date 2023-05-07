@@ -790,6 +790,7 @@ a.banner-area-link {
 
 .page-archive .entry-thumb {
     background-size: contain;
+    float: none;
 }
 
 .archive-entries .categories {
@@ -1095,7 +1096,6 @@ flex-wrap: wrap;
 justify-content: space-around;
 }
 
-.footer .footer-urllist li {}
 
 .footer .footer-urllist li a {
 color: #fff;
@@ -1104,7 +1104,6 @@ color: #fff;
 
 .footer .custom_ranking_button_area {width: 50%;}
 
-.page-archive .entry-thumb {background-size: cover;float: none;}
 
 
 .archive-entry:hover a {
