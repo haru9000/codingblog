@@ -102,10 +102,12 @@ letter-spacing: 0;
     padding: .9em 2em;
     border: 1px solid #e78888;
     border-radius: 5px;
-    background-color: #fff;
-    color: #e78888;
+    background-color: #e78888;
+    color: #fff;
     font-size: 1em;
+    box-shadow: 2px 5px #bbb;
 }
+
 
 .urllist-see-more.recent-entries-see-more a:hover
 , .pager.autopagerize_insert_before a:hover {
