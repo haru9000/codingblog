@@ -754,6 +754,7 @@ a.banner-area-link {
 .archive-entries {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 .archive-entries .archive-entry {
     font-size:12px;
@@ -1408,6 +1409,36 @@ text-align: center;
     position: relative;
     overflow: hidden;
 }
+
+.hatena-urllist {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.hatena-urllist .urllist-item:nth-child(6n-4), .hatena-urllist .urllist-item:nth-child(6n-3), .hatena-urllist .urllist-item:nth-child(6n-2), .hatena-urllist .urllist-item:nth-child(6n-1) {
+    width: 45%;
+}
+
+.urllist-with-thumbnails li{
+    align-items: center;
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    font-size: 12px;
+    margin: 1px 1%;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    box-shadow: 2px 2px #bbb;
+    margin-bottom: 5px;
+    justify-content: left;
+    flex-direction: column-reverse;
+}
+
+
 .hatena-asin-detail:hover {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
