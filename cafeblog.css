@@ -1497,4 +1497,4 @@ text-align: center;
 .hatena-module-recent-entries .hatena-module-title:after, .hatena-module .hatena-module-title:after {
     display: none;
 }
-.search-form,.search-result-form{position:relative;width:100%;background:#fff;margin:auto;border:1px solid #eee;box-sizing:border-box;margin-bottom: 5px;font-family: 游明朝,游ゴシック;}
+.search-form,.search-result-form{position:relative;width:100%;background:#fff;margin:auto;border:1px solid #eee;box-sizing:border-box;margin-bottom: 5px;font-family: 游明朝,游ゴシック;font-size:13px;}
