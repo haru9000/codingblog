@@ -774,7 +774,7 @@ a.banner-area-link {
     flex-direction: column-reverse;
 }
 
-.archive-entries .archive-entry:nth-child(6n-4), .archive-entries .archive-entry:nth-child(6n-3), .archive-entries .archive-entry:nth-child(6n-2), .archive-entries .archive-entry:nth-child(6n-1) {
+.archive-entries .archive-entry:nth-child(5n), .archive-entries .archive-entry:nth-child(5n-3), .archive-entries .archive-entry:nth-child(5n-2), .archive-entries .archive-entry:nth-child(5n-1) {
     width: 45%;
 }
 
