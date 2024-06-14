@@ -774,15 +774,9 @@ a.banner-area-link {
     flex-direction: column-reverse;
 }
 
-.archive-entries .archive-entry:nth-child(6n-4), .archive-entries .archive-entry:nth-child(6n-3), .archive-entries .archive-entry:nth-child(6n-2), .archive-entries .archive-entry:nth-child(6n-1) {
-    width: 45%;
-}
 
-@media screen and (min-width: 640px) {
-  .archive-entries .archive-entry {
-      width: 45%;
-  }
-}
+
+
 
 .archive-entry .date.archive-date {
     display: none;
