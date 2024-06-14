@@ -1419,9 +1419,7 @@ text-align: center;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.hatena-urllist .urllist-item:nth-child(6n-4), .hatena-urllist .urllist-item:nth-child(6n-3), .hatena-urllist .urllist-item:nth-child(6n-2), .hatena-urllist .urllist-item:nth-child(6n-1) {
-    width: 45%;
-}
+
 
 .urllist-with-thumbnails li{
     align-items: center;
