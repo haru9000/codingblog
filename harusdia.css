@@ -1,4 +1,648 @@
-@import 'cafeblog.css';
-@import './src/summary/summary.css';
-@import './src/accordion/accordion.css';
-@import './src/starRating/starRating.css';
+/* =========================================================
+   Haru Blog Portal Responsive Layout
+   target: Hatena Blog / CSS override only
+   place: https://haru9000.github.io/codingblog/harusdia.css
+   ========================================================= */
+
+:root {
+  --haru-bg: #f7f8fb;
+  --haru-surface: #ffffff;
+  --haru-surface-soft: rgba(255, 255, 255, .86);
+  --haru-text: #172033;
+  --haru-muted: #667085;
+  --haru-border: rgba(23, 32, 51, .09);
+  --haru-shadow: 0 18px 42px rgba(16, 24, 40, .09);
+  --haru-shadow-soft: 0 10px 28px rgba(16, 24, 40, .07);
+  --haru-radius-lg: 28px;
+  --haru-radius-md: 20px;
+  --haru-radius-sm: 14px;
+  --haru-blue: #377dff;
+  --haru-pink: #ff6f9f;
+  --haru-green: #29a66a;
+  --haru-orange: #ff8a2a;
+  --haru-purple: #9a6bff;
+  --haru-navy: #0f243f;
+  --haru-max: 1120px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(80, 154, 255, .14), transparent 34rem),
+    radial-gradient(circle at top right, rgba(255, 111, 159, .10), transparent 30rem),
+    var(--haru-bg) !important;
+  color: var(--haru-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  letter-spacing: .01em;
+}
+
+body a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body a:hover {
+  opacity: .84;
+}
+
+/* Hatena base containers */
+#container,
+#container-inner,
+#content,
+#content-inner {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+#container {
+  width: min(100%, 1240px) !important;
+  margin: 0 auto !important;
+  padding: 0 18px 48px !important;
+  box-sizing: border-box;
+}
+
+#blog-title,
+#top-box,
+#content {
+  width: 100% !important;
+  max-width: var(--haru-max) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+#blog-title {
+  padding: 26px 0 16px !important;
+}
+
+#title,
+#blog-title #title a {
+  font-size: clamp(1.45rem, 3.4vw, 2rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: .02em;
+}
+
+#blog-description {
+  color: var(--haru-muted) !important;
+  margin-top: 8px !important;
+  font-size: .95rem !important;
+  line-height: 1.8 !important;
+}
+
+/* Global nav generated / existing */
+.haru-global-nav,
+#top-editarea .haru-global-nav,
+#top-box .haru-global-nav {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  max-width: var(--haru-max);
+  margin: 10px auto 18px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  background: rgba(255, 255, 255, .82);
+  border: 1px solid var(--haru-border);
+  border-radius: 999px;
+  box-shadow: var(--haru-shadow-soft);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  scrollbar-width: none;
+}
+
+.haru-global-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.haru-global-nav a {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 15px;
+  border-radius: 999px;
+  color: var(--haru-text) !important;
+  font-size: .9rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.haru-global-nav a:hover,
+.haru-global-nav a.is-active {
+  background: var(--haru-navy);
+  color: #fff !important;
+  opacity: 1;
+}
+
+/* Portal hero inserted by JS */
+.haru-portal {
+  max-width: var(--haru-max);
+  margin: 0 auto 34px;
+}
+
+.haru-hero {
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+  border-radius: 34px;
+  background:
+    linear-gradient(135deg, rgba(10, 32, 60, .42), rgba(24, 126, 210, .18)),
+    var(--haru-hero-image, linear-gradient(135deg, #dceeff, #ffffff));
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--haru-shadow);
+  isolation: isolate;
+}
+
+.haru-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom, rgba(255,255,255,.03), rgba(255,255,255,.68));
+}
+
+.haru-hero__body {
+  min-height: 360px;
+  padding: clamp(34px, 7vw, 86px) clamp(22px, 6vw, 78px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  color: #fff;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, .22);
+}
+
+.haru-hero__eyebrow {
+  width: fit-content;
+  margin-bottom: 18px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.2);
+  border: 1px solid rgba(255,255,255,.34);
+  font-weight: 800;
+  font-size: .9rem;
+  backdrop-filter: blur(12px);
+}
+
+.haru-hero h2 {
+  margin: 0;
+  font-size: clamp(2rem, 7vw, 4.1rem);
+  line-height: 1.25;
+  letter-spacing: .04em;
+}
+
+.haru-hero p {
+  max-width: 620px;
+  margin: 18px 0 0;
+  font-size: clamp(1rem, 2.4vw, 1.25rem);
+  line-height: 1.9;
+  font-weight: 700;
+}
+
+.haru-site-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: -64px 26px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.haru-site-card {
+  display: flex;
+  min-height: 190px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  background: var(--haru-surface-soft);
+  border: 1px solid rgba(255,255,255,.72);
+  border-radius: 24px;
+  box-shadow: var(--haru-shadow-soft);
+  backdrop-filter: blur(16px);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.haru-site-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--haru-shadow);
+  opacity: 1;
+}
+
+.haru-site-card__icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  color: var(--site-color);
+  background: color-mix(in srgb, var(--site-color) 14%, #fff);
+  font-size: 1.65rem;
+}
+
+.haru-site-card h3 {
+  margin: 16px 0 8px;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.haru-site-card p {
+  margin: 0;
+  color: var(--haru-muted);
+  font-size: .9rem;
+  line-height: 1.75;
+}
+
+.haru-site-card__more {
+  margin-top: 18px;
+  color: var(--site-color);
+  font-weight: 800;
+  font-size: .9rem;
+}
+
+/* Main layout */
+#content-inner {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 310px;
+  gap: 28px;
+  align-items: start;
+}
+
+#wrapper,
+#main {
+  width: auto !important;
+  float: none !important;
+  background: transparent !important;
+}
+
+#box2,
+#box2-inner {
+  width: auto !important;
+  float: none !important;
+}
+
+/* Entries */
+.entry,
+.archive-entry,
+.page-archive .archive-entry,
+.search-result .archive-entry {
+  background: var(--haru-surface) !important;
+  border: 1px solid var(--haru-border) !important;
+  border-radius: var(--haru-radius-lg) !important;
+  box-shadow: var(--haru-shadow-soft) !important;
+  overflow: hidden;
+  padding: clamp(20px, 4vw, 34px) !important;
+  margin: 0 0 22px !important;
+}
+
+.entry-header,
+.archive-entry-header {
+  margin-bottom: 16px !important;
+}
+
+.entry-title,
+.archive-entry-header .entry-title,
+.entry-title a,
+.archive-entry-title a {
+  color: var(--haru-text) !important;
+  font-size: clamp(1.35rem, 4.6vw, 2rem) !important;
+  line-height: 1.45 !important;
+  font-weight: 850 !important;
+  letter-spacing: .01em;
+}
+
+.date,
+.entry-date,
+.archive-date,
+.categories,
+.entry-categories {
+  color: var(--haru-muted) !important;
+  font-size: .86rem !important;
+}
+
+.categories a,
+.entry-categories a,
+.archive-category-link {
+  display: inline-flex !important;
+  align-items: center;
+  margin: 4px 5px 4px 0 !important;
+  padding: 5px 10px !important;
+  border-radius: 999px !important;
+  background: rgba(55, 125, 255, .09) !important;
+  color: #2666d6 !important;
+  font-size: .78rem !important;
+  font-weight: 700 !important;
+}
+
+.entry-content,
+.archive-entry-body {
+  color: #273348;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.entry-content img,
+.entry-content iframe,
+.archive-entry img {
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 18px;
+}
+
+.entry-content h2,
+.entry-content h3,
+.entry-content h4 {
+  line-height: 1.55;
+  color: var(--haru-text);
+}
+
+.entry-content h2 {
+  margin-top: 2.2em;
+  padding: 14px 18px;
+  border-left: 6px solid var(--haru-blue);
+  border-radius: 0 16px 16px 0;
+  background: rgba(55, 125, 255, .07);
+}
+
+.entry-content blockquote,
+.entry-content pre {
+  border-radius: 18px !important;
+}
+
+.entry-footer,
+.social-buttons,
+.comment-box {
+  border-top: 1px solid var(--haru-border);
+  margin-top: 24px !important;
+  padding-top: 18px !important;
+}
+
+/* Archive / top list card feeling */
+.page-index .entry,
+.page-archive .archive-entry {
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.page-index .entry:hover,
+.page-archive .archive-entry:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--haru-shadow) !important;
+}
+
+.page-index .entry-content,
+.page-archive .archive-entry-body {
+  color: var(--haru-muted);
+}
+
+/* Sidebar */
+.hatena-module {
+  margin: 0 0 18px !important;
+  padding: 20px !important;
+  background: var(--haru-surface) !important;
+  border: 1px solid var(--haru-border) !important;
+  border-radius: 24px !important;
+  box-shadow: var(--haru-shadow-soft) !important;
+}
+
+.hatena-module-title {
+  margin: 0 0 14px !important;
+  color: var(--haru-text) !important;
+  font-weight: 850 !important;
+  font-size: 1rem !important;
+}
+
+.hatena-module ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.hatena-module li {
+  border-top: 1px solid var(--haru-border);
+  padding: 10px 0 !important;
+  line-height: 1.65;
+}
+
+.hatena-module li:first-child {
+  border-top: 0;
+}
+
+.hatena-module-search-box .search-form,
+.search-form {
+  display: flex;
+  gap: 8px;
+}
+
+.search-module-input,
+.search-form input[type="text"] {
+  min-width: 0;
+  width: 100% !important;
+  height: 42px;
+  border: 1px solid var(--haru-border) !important;
+  border-radius: 14px !important;
+  padding: 0 12px !important;
+  background: #fafafa !important;
+}
+
+.search-module-button,
+.search-form input[type="submit"] {
+  height: 42px;
+  border: 0 !important;
+  border-radius: 14px !important;
+  padding: 0 14px !important;
+  background: var(--haru-navy) !important;
+  color: #fff !important;
+  font-weight: 800;
+}
+
+/* Category chips generated by JS */
+.haru-category-panel {
+  max-width: var(--haru-max);
+  margin: 0 auto 28px;
+  padding: 24px;
+  background: var(--haru-surface);
+  border: 1px solid var(--haru-border);
+  border-radius: var(--haru-radius-lg);
+  box-shadow: var(--haru-shadow-soft);
+}
+
+.haru-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-weight: 850;
+  font-size: 1.15rem;
+}
+
+.haru-category-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.haru-category-chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 8px 10px;
+  border: 1px solid var(--haru-border);
+  border-radius: 16px;
+  background: #fff;
+  color: var(--haru-text) !important;
+  font-size: .86rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.haru-category-chip:hover {
+  border-color: rgba(55, 125, 255, .35);
+  background: rgba(55, 125, 255, .06);
+  opacity: 1;
+}
+
+/* Footer */
+#footer,
+#footer-inner {
+  max-width: var(--haru-max) !important;
+  margin: 36px auto 0 !important;
+  padding: 28px !important;
+  border-radius: 28px;
+  background: rgba(255,255,255,.72) !important;
+  border: 1px solid var(--haru-border);
+  box-shadow: var(--haru-shadow-soft);
+  color: var(--haru-muted) !important;
+  text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 960px) {
+  #content-inner {
+    display: block !important;
+  }
+
+  #box2 {
+    margin-top: 24px !important;
+  }
+
+  .haru-site-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .haru-category-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  #container {
+    padding: 0 10px 32px !important;
+  }
+
+  #blog-title {
+    padding: 18px 4px 10px !important;
+  }
+
+  .haru-global-nav {
+    margin: 8px auto 14px;
+    border-radius: 18px;
+    padding: 8px;
+  }
+
+  .haru-global-nav a {
+    min-height: 36px;
+    padding: 0 13px;
+    font-size: .82rem;
+  }
+
+  .haru-portal {
+    margin-bottom: 24px;
+  }
+
+  .haru-hero {
+    min-height: 300px;
+    border-radius: 24px;
+  }
+
+  .haru-hero__body {
+    min-height: 300px;
+    padding: 34px 22px 82px;
+    justify-content: flex-end;
+  }
+
+  .haru-hero__eyebrow {
+    font-size: .78rem;
+    margin-bottom: 12px;
+  }
+
+  .haru-hero p {
+    font-size: .95rem;
+    line-height: 1.75;
+  }
+
+  .haru-site-grid {
+    display: flex;
+    gap: 12px;
+    margin: -56px 10px 0;
+    overflow-x: auto;
+    padding: 0 0 8px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .haru-site-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .haru-site-card {
+    flex: 0 0 78%;
+    min-height: 150px;
+    padding: 18px;
+    border-radius: 20px;
+    scroll-snap-align: start;
+  }
+
+  .haru-site-card__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 15px;
+    font-size: 1.35rem;
+  }
+
+  .entry,
+  .archive-entry,
+  .hatena-module,
+  .haru-category-panel {
+    border-radius: 20px !important;
+    padding: 18px !important;
+  }
+
+  .entry-content,
+  .archive-entry-body {
+    font-size: .98rem;
+    line-height: 1.95;
+  }
+
+  .page-index .entry-title,
+  .entry-title,
+  .archive-entry-title a {
+    font-size: 1.24rem !important;
+  }
+
+  .haru-category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .haru-category-chip {
+    min-height: 44px;
+    font-size: .82rem;
+  }
+}
