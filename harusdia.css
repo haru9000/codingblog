@@ -279,12 +279,15 @@ body a:hover {
   width: auto !important;
   float: none !important;
   background: transparent !important;
+  max-width: 100%;
 }
+
 
 #box2,
 #box2-inner {
   width: auto !important;
   float: none !important;
+  max-width: 100%;
 }
 
 /* Entries */
