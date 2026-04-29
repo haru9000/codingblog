@@ -649,3 +649,16 @@ body a:hover {
     font-size: .82rem;
   }
 }
+
+header#blog-title {
+    height: 100px!important;
+}
+
+div#blog-title-inner {
+    width: 100%;
+    background: none;
+}
+
+h1#title {
+    border-bottom: none;
+}
